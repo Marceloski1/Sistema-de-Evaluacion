@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Evaluación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Evaluación</h1>
+        <div class="menu">
+            <button id="registroEvaluacion">Registrar Evaluación</button>
+            <button id="mostrarEvaluaciones">Mostrar Evaluaciones</button>
+            <button id="calcularPromedio">Calcular Promedio</button>
+        </div>
+        <div id="formularios">
+            <form id="formRegistro" class="formulario">
+                <h2>Registrar Evaluación</h2>
+                <label for="estudiante">Estudiante:</label>
+                <input type="text" id="estudiante" required>
+                <label for="materia">Materia:</label>
+                <input type="text" id="materia" required>
+                <label for="calificacion">Calificación:</label>
+                <input type="number" id="calificacion" min="0" max="100" required>
+                <button type="submit">Registrar</button>
+            </form>
+            <div id="listaEvaluaciones" class="formulario">
+                <h2>Lista de Evaluaciones</h2>
+                <ul id="evaluaciones"></ul>
+            </div>
+            <form id="formPromedio" class="formulario">
+                <h2>Calcular Promedio</h2>
+                <label for="promEstudiante">Estudiante:</label>
+                <input type="text" id="promEstudiante" required>
+                <label for="promMateria">Materia:</label>
+                <input type="text" id="promMateria" required>
+                <button type="submit">Calcular</button>
+                <div id="resultadoPromedio"></div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
